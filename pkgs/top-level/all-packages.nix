@@ -3686,6 +3686,12 @@ with pkgs;
 
   mkrand = callPackage ../tools/security/mkrand { };
 
+  mkosi = callPackage ../tools/virtualization/mkosi {
+    inherit (python3Packages) buildPythonApplication;
+    OVMF = null;
+    qemu = null;
+  };
+
   mktemp = callPackage ../tools/security/mktemp { };
 
   mktorrent = callPackage ../tools/misc/mktorrent { };
