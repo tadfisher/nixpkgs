@@ -120,7 +120,6 @@ in
           description = "btrfs scrub on ${fs}";
 
           serviceConfig = {
-            Type = "oneshot";
             Nice = 19;
             IOSchedulingClass = "idle";
             ExecStart = "${pkgs.btrfs-progs}/bin/btrfs scrub start -B ${fs}";
