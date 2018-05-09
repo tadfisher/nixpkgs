@@ -3926,6 +3926,8 @@ with pkgs;
 
   networkmanager_strongswan = callPackage ../tools/networking/network-manager/strongswan.nix { };
 
+  networkmanager-wireguard = callPackage ../tools/networking/network-manager/wireguard.nix { };
+
   networkmanagerapplet = newScope gnome2 ../tools/networking/network-manager/applet.nix { };
 
   networkmanager_dmenu = callPackage ../tools/networking/network-manager/dmenu.nix  { };

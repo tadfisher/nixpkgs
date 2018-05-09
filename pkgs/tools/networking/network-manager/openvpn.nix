@@ -14,7 +14,7 @@ in stdenv.mkDerivation rec {
 
   patches = [
     (substituteAll {
-      src = ./fix-paths.patch;
+      src = ./openvpn-fix-paths.patch;
       inherit kmod openvpn;
     })
   ];

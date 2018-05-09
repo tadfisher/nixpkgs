@@ -1,0 +1,27 @@
+diff --git a/src/nm-wireguard-service.c b/src/nm-wireguard-service.c
+index 9649855..8001780 100644
+--- a/src/nm-wireguard-service.c
++++ b/src/nm-wireguard-service.c
+@@ -135,12 +135,7 @@ static const char *
+ wg_quick_find_exepath (void)
+ {
+ 	static const char *paths[] = {
+-		"/usr/sbin/wg-quick",
+-		"/usr/bin/wg-quick",
+-		"/sbin/wg-quick",
+-		"/bin/wg-quick",
+-		"/usr/local/sbin/wg-quick",
+-		"/usr/local/bin/wg-quick",
++		"@wireguard@/bin/wg-quick"
+ 	};
+ 	int i;
+ 
+@@ -718,7 +713,7 @@ main (int argc, char *argv[])
+ 
+ 	// this is left over from openvpn, and doesn't seem to bother us...
+ 	if (   !g_file_test ("/sys/class/misc/tun", G_FILE_TEST_EXISTS)
+-	    && (system ("/sbin/modprobe tun") == -1)){
++	    && (system ("@kmod@/bin/modprobe tun") == -1)){
+ 			exit (EXIT_FAILURE);
+ 		}
+ 
