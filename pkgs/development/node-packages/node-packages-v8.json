@@ -3,6 +3,7 @@
 , "coffee-script"
 , "create-cycle-app"
 , "dat"
+, "graphqlviz"
 , "grunt-cli"
 , "mocha"
 , "nijs"
