@@ -247,20 +247,19 @@ in
     };
   };
 
-  sysimg_x86_25 = buildSystemImage {
-    name = "sysimg-x86-25";
+  sysimg_x86_28 = buildSystemImage {
+    name = "sysimg-x86-28";
     src = fetchurl {
-      url = https://dl.google.com/android/repository/sys-img/android/x86-25_r03.zip;
-      sha1 = "7dd19cfee4e43a1f60e0f5f058404d92d9544b33";
+      url = https://dl.google.com/android/repository/sys-img/android/x86-28_r02.zip;
+      sha1 = "91cfacbd9a95b2e805950a18c6ad9e3b851ea445";
     };
   };
 
-  sysimg_x86_64_25 = buildSystemImage {
-    name = "sysimg-x86_64-25";
+  sysimg_x86_64_28 = buildSystemImage {
+    name = "sysimg-x86_64-28";
     src = fetchurl {
-      url = https://dl.google.com/android/repository/sys-img/android/x86_64-25_r03.zip;
-      sha1 = "4593ee04811df21c339f3374fc5917843db06f8d";
+      url = https://dl.google.com/android/repository/sys-img/android/x86_64-28_r02.zip;
+      sha1 = "57feae43c2042ae90016f572421b76d44fd317c4";
     };
   };
 }
-

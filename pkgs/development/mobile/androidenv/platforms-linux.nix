@@ -316,4 +316,28 @@ in
     };
   };
 
+  platform_27 = buildPlatform {
+    name = "android-platform-8.1.0";
+    src = fetchurl {
+      url = https://dl.google.com/android/repository/platform-27_r03.zip;
+      sha1 = "35f747e7e70b2d16e0e4246876be28d15ea1c353";
+    };
+    meta = {
+      description = "Android SDK Platform 27";
+      homepage = http://developer.android.com/sdk/;
+    };
+  };
+
+  platform_28 = buildPlatform {
+    name = "android-platform-9";
+    src = fetchurl {
+      url = https://dl.google.com/android/repository/platform-28_r04.zip;
+      sha1 = "8d52871cc67f190488abf2503e00e62cea112980";
+    };
+    meta = {
+      description = "Android SDK Platform 28";
+      homepage = http://developer.android.com/sdk/;
+    };
+  };
+
 }

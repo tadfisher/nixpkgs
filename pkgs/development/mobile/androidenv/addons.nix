@@ -247,6 +247,18 @@ in
   google_apis_23 = buildGoogleApis {
     name = "google_apis-23";
       src = fetchurl {
+        url = https://dl.google.com/android/repository/google_apis-25_r1.zip;
+        sha1 = "550e83eea9513ab11c44919ac6da54b36084a9f3";
+      };
+      meta = {
+        description = "Android + Google APIs";
+
+      };
+    };
+
+  google_apis_23 = buildGoogleApis {
+    name = "google_apis-23";
+      src = fetchurl {
         url = https://dl.google.com/android/repository/google_apis-23_r01.zip;
         sha1 = "04c5cc1a7c88967250ebba9561d81e24104167db";
       };
@@ -268,36 +280,11 @@ in
       };
     };
 
-  google_apis_25 = buildGoogleApis {
-    name = "google_apis-25";
-      src = fetchurl {
-        url = https://dl.google.com/android/repository/google_apis-25_r1.zip;
-        sha1 = "550e83eea9513ab11c44919ac6da54b36084a9f3";
-      };
-      meta = {
-        description = "Android + Google APIs";
-
-      };
-    };
-
-  android_support_extra = buildGoogleApis {
-    name = "android_support_extra";
-    src = fetchurl {
-      url = https://dl.google.com/android/repository/support_r23.2.1.zip;
-      sha1 = "41121bbc412c2fce0be170d589d20cfa3e78e857";
-    };
-    meta = {
-      description = "Android Support Library";
-      url = http://developer.android.com/;
-    };
-  };
-
-
   google_play_services = buildGoogleApis {
     name = "google_play_services";
     src = fetchurl {
-      url = https://dl.google.com/android/repository/google_play_services_v12_1_rc11.zip;
-      sha1 = "d2bb583a3f62b068d448df10544c1852d910526f";
+      url = https://dl.google.com/android/repository/google_play_services_v16_1_rc09.zip;
+      sha1 = "f95bf19634e2ab0430923247fe2c50246432d2e9";
     };
     meta = {
       description = "Google Play services client library and sample code";
@@ -308,13 +295,14 @@ in
   instant_apps = buildGoogleApis {
     name = "instant_apps_sdk";
     src = fetchurl {
-      url = https://dl.google.com/android/repository/aiasdk-1.0.0.zip;
-      sha1 = "50074a0f0312ee1d0d81d2cddc3d84a8a9e97a53";
+      url = https://dl.google.com/android/repository/aiasdk-1.3.0-1525823131.zip;
+      sha1 = "83da81493dc7e95e0200b7da53f0bd66c8f143e2";
     };
     meta = {
       description = "Android Instant Apps Development SDK";
       url = "https://developer.android.com/";
     };
   };
+
 
 }
